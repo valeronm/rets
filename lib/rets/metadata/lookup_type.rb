@@ -1,11 +1,12 @@
 module Rets
   module Metadata
     class LookupType
-      attr_reader :long_value, :value
+      attr_reader :long_value, :short_value, :value
 
       def initialize(lookup_type_fragment)
-        @value       = lookup_type_fragment["Value"].strip
-        @long_value  = lookup_type_fragment["LongValue"].strip
+        @value       = lookup_type_fragment['Value'].strip
+        @short_value = lookup_type_fragment['ShortValue'].strip
+        @long_value  = lookup_type_fragment['LongValue'].strip
       end
 
       # Print the tree to a file
